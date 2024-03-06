@@ -1,0 +1,27 @@
+
+/*
+p {
+    font-size: 32px;
+}
+
+we don't want absolute values for font-size, in order to allow users
+to set their font size in their browsers.
+*/
+header {
+    width: 50%;
+}
+
+h1 {
+    border: 2px dashed red;
+    width: 50%;
+    font-size: 3rem;
+    padding: 0.5em;
+}
+/* in this case, the h1 width will be 25% of the screen, since it's enclosed in the header element, which is given 50% */
+
+
+p {
+    font-size: 2rem;
+}
+/* we set the font-size of paragraphs to 1rem, which is 200% of the root element font-size. since
+we don't set a font-size in the root element (html), it  will be set by the browser.  */
