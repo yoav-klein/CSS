@@ -1,0 +1,16 @@
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+}
+
+/* 
+input, button {
+    font: inherit;
+} */
+
+p {
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    font-style:italic;
+}
