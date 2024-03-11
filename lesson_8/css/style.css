@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+ol {
+  /* list-style-type: upper-roman; */
+  list-style-type: none;
+  padding: 0;
+}
+
+ul {
+  list-style-type: square;
+  text-align: center;
+  list-style-position: inside;
+  color: #00f;
+  /* list-style-image: url('../images/checkmark.png'); */
+  /* short notation */
+  /*list-style: square url('../images/checkmark.png') inside; */
+}
+
+li {
+  color: red;
+}
+
+ul li:nth-child(even) {
+  color: red;
+}
+
+ul ::marker {
+  color: red;
+  font-family: fantasy;
+  font-size: 1em;
+  content: "Only $5 >> ";
+}
