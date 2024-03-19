@@ -1,13 +1,13 @@
-# Columns
+# Position
 ---
+See the Google Docs document
 
-Introduced:
-* `column-count`
-* `column-width`
-* `columns` - a shorthand
-* `column-rule` - the border between columns
-* `column-gap` - spacing between columns
-* `break-inside: avoid` - see in the video
-* `column-span` - to have an element span across columns
-* `white-space: nowrap` - to avoid breaking an element to lines
+The `position` setting controls how elements are positioned in your page.
+Covered values of this setting:
+* `static` - the default
+* `absolute`
+* `relative`
+* `fixed`
+* `sticky`
 
+Also, as an aside, the `scroll-behavior` setting was introduced

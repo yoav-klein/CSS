@@ -64,6 +64,10 @@ body {
 
 /********************* part 2 *************************/
 
+html {
+  scroll-behavior: smooth;
+}
+
 section {
   height: 100vh;
 }
