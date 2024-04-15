@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            margin: 10px;
+            border: 4px solid black;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  gap: 20px;
+}
+
+.wrapper > div {
+  background-color: rebeccapurple;
+  border-radius: .5em;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 2px solid #000;
+  margin: 0 0 1em 0;
+  padding: 10px;
+  width: 100%;
+  background-color: aqua;
+}
+
+input[type="submit"] {
+  border: 3px solid #333;
+  background-color: #999;
+  border-radius: 5px;
+  padding: 10px 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #333;
+}
+    </style>
+</head>
+<body>
+    <h1>Images, media and forms</h1>
+    <h2>Sizing images</h2>
+    <div class="box"><img src="img/balloons.jpg" alt=""></div>
+    <div class="box"><img src="img/star.png" alt=""></div>
+
+    <h2>Replaced elements in layout</h2>
+    <p>Replaced elements like images don't behave like other elements in layout such as grid or flex.
+
+    </p>
+    <div class="wrapper">
+        <img src="img/star.png" alt="star">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <h2>Form elements</h2>
+
+      <h3>Styling text input elements</h3>
+      <div style="width: 50%; font-family: Arial, Helvetica, sans-serif;">
+        <form>
+            <div><label for="name">Name</label>
+            <input type="text" id="name"></div>
+            <div><label for="email">Email</label>
+            <input type="email" id="email"></div>
+        
+            <div class="buttons"><input type="submit" value="Submit"></div>
+        </form>
+        </div>
+
+</body>
+</html>

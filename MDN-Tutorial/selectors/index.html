@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rebeccapurple;
+        }
+
+        /* simple type selector - selecting all h1 elements */
+        h1 {
+            color: red;
+        }
+        
+        /* descendant combinator - selecting all p elements inside div elements */
+        div p {
+            background-color: aqua;
+        }
+
+        /* simple class selector */
+        .para {
+            font-style: italic;
+        }
+
+        /* descendant combinator - selecting elements with class 'para' inside div elements */
+        div .foo {
+            color: white;
+        }
+
+        /* descendant combinator - selecting paragraph elements that are inside elements that have the groovy class */
+        .groovy p {
+            background-color: bisque;
+            font-size: 3rem;
+        }
+
+        /* targeting h2 with the class highlight applied */
+        h2.highlight {
+            background-color: yellow;
+        }
+
+        /* targeting h3 with the class highlight applied*/
+        h3.highlight {
+            background-color: green;
+        }
+        
+        /* will be applied to all elements with notebox class applied */
+        .notebox {
+            border: 4px solid #666;
+            padding: .5em;
+        }
+
+        /* will be applied only to elements with both notebox and warning classes applied */
+        .notebox.warning {
+            border-color: orange;
+            font-weight: bold;
+        }
+
+        /* will be applied only to elements with both notebox and danger classes applied */
+        .notebox.danger {
+            border-color: red;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Simple h1</h1>
+    <h2 class="highlight">This is a heading2</h2>
+    <h3 class="highlight">This is a heading3</h3>
+    <h1>This is another heading</h1>
+    <div>
+        <p>Paragraph inside the div</p>
+    </div>
+    <div>
+        <p class="foo">Paragraph foo</p>
+    </div>
+    <p class="para">Paragraph outside the box</p>
+    <p class="highlight">This is highlighted</p>
+
+    <div class="groovy"><p>Descendant combinator</p></div>
+    <div class="notebox">
+        This is an informational note.
+    </div>
+    
+    <div class="notebox warning">
+        This note shows a warning.
+    </div>
+    
+    <div class="notebox danger">
+        This note shows danger!
+    </div>
+    
+    <div class="danger">
+        This won't get styled — it also needs to have the notebox class
+    </div>
+
+</body>
+</html>

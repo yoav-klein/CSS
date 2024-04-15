@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Left Side Bar</title>
+<style>
+    /* CSS for the left side bar */
+    .sidebar {
+        height: 100%;
+        width: 150px; /* Adjust the width as needed */
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, rgba(131, 96, 187, 0.4), rgba(131, 96, 187, 0.8));
+        box-shadow: 3px 3px 10px black;
+    }
+
+    /* CSS for the content area */
+    .content {
+        margin-left: 150px; /* Should match the width of the sidebar */
+        padding: 20px; /* Adjust padding as needed */
+    }
+
+    /* Example styling for content */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: #333;
+    }
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar"></div>
+
+<!-- Page content -->
+<div class="content">
+    <h1>Left Side Bar Example</h1>
+    <p>This is a simple example of a left side bar using HTML and CSS.</p>
+    <p>You can adjust the width and color of the sidebar according to your preferences.</p>
+</div>
+
+</body>
+</html>

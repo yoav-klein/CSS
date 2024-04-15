@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+        .img {
+            border: 2px solid black;
+            margin: 5px;
+            height: 150px;
+            width: 300px;
+            background-color: aqua;
+        }
+        .a {
+            background-image: url(img/balloons.jpg);
+            background-repeat: no-repeat;
+        }
+        .b {
+            background-image: url(img/star.png);
+        }
+        .no-repeat {
+            background-repeat: no-repeat;
+        }
+        .img-tall {
+            height: 350px;
+            width: 150px;
+        }
+        .img-wide {
+            height: 150px;
+            width: 350px;
+        }
+        .cover {
+            background-size: cover;
+        }
+        .contain {
+            background-size: contain;
+        }
+        
+        .no-repeat {
+            background-repeat: no-repeat;
+        }
+        .repeat-horiz {
+            background-repeat: repeat-x;
+        }
+        .repeat-vert {
+            background-repeat: repeat-y;
+        }
+        .lengths {
+            background-position: 20px 20px;
+        }
+        .percentages {
+            background-position: 50% 50%;
+        }
+        .mixed {
+            background-position: 20px top;
+        }
+        .gradient {
+            background-image: linear-gradient(105deg, rgb(0 249 255 / 100%) 39%, rgb(51 56 57 / 100%) 96%);
+        }
+        .attach {
+            background-attachment: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Backgrounds and borders</h1>
+
+    <div class="box">background-color</div>
+    
+    <h2>Background images</h2>
+    <div class="img a"></div>
+    <div class="img b"></div>
+
+    <h3>Repeat mechanisms</h3>
+    <p>When the image is smaller than the box, we set the background-repeat to determine what to do</p>
+    <div class="img b no-repeat">background-repeat: no-repeat</div>
+    <div class="img b repeat-horiz">background-repeat: repeat-x</div>
+    <div class="img b repeat-vert">background-repeat: repeat-y</div>
+
+    <h3>Background size</h3>
+    <p>When the image is larger than the box, we set the background-size to determine what to do</p>
+    <h4>cover</h4>
+    <p>background-size: cover makes that the image will cover the box while retaining the ratio of the image.
+        this causes that the image will be cropped unless the ratio of the box is exactly the same
+    </p>
+    <div class="img a img-wide cover"></div>
+    <div class="img a img-tall cover"></div>
+    <h4>contain</h4>
+    <p>background-size: contain makes the image the size that it will fit wholy inside the box. This may
+        create gaps if the ratio is not equal
+    </p>
+    <div class="img a img-wide contain"></div>
+    <div class="img a img-tall contain"></div>
+
+    <h3>Background position</h3>
+    <p>You use the background-position to set where in the box the image will appear</p>
+    <div class="img b no-repeat">this is the default</div>
+    <div class="img b no-repeat lengths">background-position: 20px 20px</div>
+    <div class="img b no-repeat percentages">background-position: 50% 50%</div>
+    <div class="img b no-repeat mixed">background-position: 20px top</div>
+
+    <h3>Gradients</h3>
+    <div class="img gradient"></div>
+
+    <h3>attachments</h3>
+    <div class="img gradient attach"></div>
+    
+</body>
+</html>

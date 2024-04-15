@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .comment {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 15px;
+        }
+        .box {
+            width: 40vw;
+            height: 40vh;
+            margin: 15px;
+            background-color: rebeccapurple;
+        }
+        .linear1 {
+            background-image: linear-gradient(45deg, red, blue);
+        }
+        .linear2 {
+            background-image: linear-gradient(to left top, red, blue);
+        }
+        .linear3 {
+            background-image: linear-gradient(0deg, blue, green 40%, red);
+        }
+
+        .linear4 {
+            background-image: linear-gradient(.25turn, red, 10%, blue);
+        }
+
+        .linear5 {
+            background-image: linear-gradient(45deg, red 0 50%, blue 50% 100%);
+        }
+    </style>
+</head>
+<body>
+    <p class="comment">linear-gradient(45deg, red, blue)</p>
+    <div class="box linear1"></div>
+
+    <p class="comment">linear-gradient(to left top, blue, red)</p>
+    <div class="box linear2"></div>
+
+    <p class="comment">color stop. going from bottom to top. starting blue, turning green at 40%, and finishing red
+         <br> linear-gradient(0deg, blue, green 40%, red)</p>
+    <div class="box linear3"></div>
+
+    <p class="comment">color hint. start red, get to the middle color at 10%, and finish blue<br>
+        linear-gradient(.25turn, red, 10%, blue)
+    </p>
+    <div class="box linear4"></div>
+
+    <p class="comment">Multi-position color stop: A gradient tilted 45 degrees,
+        with a red bottom-left half and a blue top-right half,
+        with a hard line where the gradient changes from red to blue
+        <br>linear-gradient(45deg, red 0 50%, blue 50% 100%)</p>
+    <div class="box linear5"></div>
+</body>
+</html>

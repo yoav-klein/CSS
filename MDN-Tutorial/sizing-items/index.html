@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: yellowgreen;
+            margin: 10px;
+            border: 2px solid black;
+        }
+        .fixed {
+            height: 150px;
+            width: 200px;
+        }
+        .percent {
+            width: 50%;
+        }
+        .min-size {
+            width: 150px;
+            min-height: 150px;
+        }
+        .box1 {
+            width: 200px;
+        }
+        .width {
+            width: 100%;
+        }
+        .max {
+            max-width: 100%;
+        }
+        .minibox {
+            width: 20px;
+        }
+        .viewport {
+            border: 5px solid darkblue;
+            width: 20vw;
+            height: 20vh;
+            font-size: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sizing Items</h1>
+    <p>An empty div has no intrinsic size. what you see is the border:</p>
+    <div class="box"></div>
+    <div class="box">But if there's text inside, then the size is the size of the content</div>
+    <p>You can also set a size to your div</p>
+    <div class="box fixed">This is fixed size</div>
+    <div class="box fixed" style="font-size: 24px">These boxes both have a height set, this box has content in it which will need more space than the assigned height, and so we get overflow.</div>
+        <br><br><br><br>
+    <h2>Percentages</h2>
+    <div class="box fixed">
+        <div class="box percent" style="background-color: brown;">I'm the inner box with width:50%</div>
+    </div>
+    <h2>min- max- sizes</h2>
+    <p>The following two boxes have the same CSS: fixed width and min-height. One of them contains content so it needs to grow bigger</p>
+    <div class="box min-size"></div>
+    <div class="box min-size" style="font-size: 24px">These boxes both have a height set, this box has content in it which will need more space than the assigned height, and so we get overflow.</div>
+
+    <h4>max-width</h4>
+    <p>max-width is useful when working with images. setting a <code>max-width: 100%</code> on an image allows the image to scale down when
+        there's not enough space in the enclosing container, while not causing it to stretch when the container is bigger than then intrinsic value of the image</p>
+        <br>
+        <p>in the first example, we use <code>width: 100%</code> so the image is streched, causing pixalation</p>
+    <div class="box box1"><img src="img/star.png" alt="" class="width"></div>
+    <p>in this example, we use <code>max-width:100%</code> so that the image doesn't strech</p>
+    <div class="box box1"><img src="img/star.png" alt="" class="max"></div>
+    <p>in this example, we also use <code>max-width:100%</code>. the image is scaled down to the size of the container</p>
+    <div class="box minibox"><img src="img/star.png" alt="" class="max"></div>
+
+    <h2>Viewport</h2>
+    <p>Viewport is the visible area of your page in the browser. The <code>vh</code> (viewport height) and <code>vw</code> (viewport width) 
+    are units relative to the size of the viewport.</p>
+
+    <p>Play with the height and width of the page to see the size of the box and text change</p>
+    <div class="viewport">
+        A
+    </div>
+
+</body>
+</html>

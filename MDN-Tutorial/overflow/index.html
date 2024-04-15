@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        code {
+            font-style: normal;
+        }
+
+        .comment {
+            font-style: italic;
+        }
+        .box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+}
+
+.word {
+  border: 1px solid #333333;
+  width: 100px;
+  font-size: 250%;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+.scroll-y {
+    overflow-y: scroll;
+}
+    </style>
+</head>
+<body>
+    <p class="comment">This box has a height and width. The content overflows down from the box and overrides the paragraph beneath</p>
+    <div class="box">
+        This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.
+    </div>
+    <p>This content is outside of the box.</p>
+    <br><br><br>
+    <p class="comment">This box has only width, and it's not enough for the word Overflow</p>
+    <div class="word">Overflow</div>
+    <br><br>
+    <p class="comment">This is <code>overflow: hidden;</code> we'll see the same box as the first example</p>
+    <div class="box hidden">This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.</div>
+
+    <p>This content is outside of the box.</p>
+    <p class="comment">You can also have a scrollbar when the content overflows with <code>overflow: scroll;</code></p>
+    <div class="box scroll">This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.</div>
+
+    <p>This content is outside of the box.</p>
+
+    <p class="comment">You can also get a scrollbar only on the y axis, or only the x axis</p>
+    <div class="box scroll-y">This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.</div>
+
+    <p>This content is outside of the box.</p>
+</body>
+</html>

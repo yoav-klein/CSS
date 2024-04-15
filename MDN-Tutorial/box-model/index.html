@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        h1 { /* since h1 has a default of display: block, then: 
+            1. the width and height properties are respected
+            2. the padding, margins and border push away other elements - so it pushes the paragraph beneath it
+            */
+            border: 4px solid rebeccapurple;
+            padding: 10px;
+            margin: 20px;
+            width: 50%;
+            height: 50px;
+        }
+        .container {
+            background-color: aqua;
+            padding: 4px;
+            border: solid 4px black;
+            margin: 10px;
+            width: 50%;
+            /* padding: 10px; */
+            /* margin: 10px 50px; */
+        }
+        .span-inline { /* since span has a defualt of display: inline, then: 
+            1. the box will not be in a new line 
+            2. the height and width are not respected 
+            3. top and bottom padding, border and margins will apply but will not cause other inline elements to be pushed away from the box
+            so you can see how the border override the line beneath 
+            4. left and right padding, border and margins will apply and will cause other inline elements to be pushed away from the box 
+            */
+            background-color: yellowgreen;
+            border: 4px solid black;
+            margin: 5px 10px;
+            padding: 5px 10px;
+            height: 200px;
+            width: 200px;
+        }
+        .span-block {
+            display: block;
+            background-color: yellowgreen;
+            border: 4px solid black;
+            margin: 5px 10px;
+            padding: 5px 10px;
+            height: 50px;
+            width: 100px;
+        }
+        .span-inline-block {
+            display: inline-block;
+            background-color: yellowgreen;
+            border: 4px solid black;
+            margin: 20px 5px;
+            padding: 5px;
+            height: 50px;
+
+        }
+        
+        .box {
+            padding: 40px;
+            border: 4px solid black;
+            margin: 10px;
+            background-color: #666;
+            height: 150px;
+            width: 300px;
+        }
+        .alternative {
+            box-sizing: border-box;
+        }
+        .inline-block {
+            display: inline-block;
+        }
+        .links-list {
+            padding: 0;
+            display: flex;
+            border: solid 3px black;
+            width: 60%;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+        .links-list a {
+            background-color: rgb(179 57 81);
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 2em;
+        }
+        .links-list-inline-block a {
+            display: inline-block;
+        }
+
+        .links-list a:hover {
+            background-color: rgb(66 28 40);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>H1 header</h1> <!-- h1 header has a default of display: block -->
+    <p>This paragraph is after the h1 header. A list is also a block-level element</p>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+    <p>This is another paragraph. A paragraph is a block box, that's why it's in a new line. Let's add some line breaks</p>
+
+    <br><br><br><br>
+    <div class="container"><p>In the heart of the bustling city, <span class="span-inline">where neon lights dance against the canvas</span> of the night sky, lies a realm of endless possibilities. Streets pulsate with the rhythm of life, a cacophony of voices weaving tales of dreams and desires. From the quaint cafes tucked away in forgotten corners to the towering skyscrapers that pierce the heavens, every corner holds a story waiting to be unraveled.</p></div>
+    <p>You can set a span to be a block level element:</p>
+    <div class="container"><p>In the heart of the bustling city, <span class="span-block">where neon lights dance against the canvas</span> of the night sky, lies a realm of endless possibilities. Streets pulsate with the rhythm of life, a cacophony of voices weaving tales of dreams and desires. From the quaint cafes tucked away in forgotten corners to the towering skyscrapers that pierce the heavens, every corner holds a story waiting to be unraveled.</p></div>
+    <p>This comes right after the div box</p>
+    <h2>Standard model vs Alternate model</h2>
+    <div class="box alternative">Alternate model (box-sizing: border-box) sets the height and width on content+padding+border</div>
+    <div class="box">Standard model (box-sizing: content-box) sets the height and width on content only</div>
+    <h2>inline-block</h2>
+    <p>The inline-block display is a middle ground between inline and block. It doesn't break into a new line, but respects height and width, and padding, borders
+        and margins are respected top-bottom wise.
+    </p>
+    <div class="container">
+        <p>In the heart of the bustling city, <span class="span-inline-block">where neon lights dance against the canvas</span> of the night sky, lies a realm of endless possibilities. Streets pulsate with the rhythm of life, a cacophony of voices weaving tales of dreams and desires. From the quaint cafes tucked away in forgotten corners to the towering skyscrapers that pierce the heavens, every corner holds a story waiting to be unraveled.</p>
+    </div>
+    <p>Inline block can be useful in navigation bars. Compare:</p>
+    <br><br><br><br>
+    <ul class="links-list links-list-block">
+        <li><a href="">Link one</a></li>
+        <li><a href="">Link two</a></li>
+        <li><a href="">Link three</a></li>
+    </ul>
+    <br><br><br><br>
+    <ul class="links-list links-list-inline-block">
+        <li><a href="">Link one</a></li>
+        <li><a href="">Link two</a></li>
+        <li><a href="">Link three</a></li>
+    </ul>
+    
+</body>
+</html>
