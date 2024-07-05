@@ -1,6 +1,10 @@
 
-* flexbox0 - simple first example
-* flexbox-wrap0 - demonstrates flex-wrap: warp;
-* flexbox1 - demonstrates flexible sizing of flex items
-* flex-align0 - aligning flex items
+* flexbox0 - Starter code
+* flexbox1 - simple first example
+* flexbox2 - demonstrates setting size to flex items
+* flexbox3 - demonstrates flex-direction
+* flexbox-wrap0 - Starter code
+* flexbox-wrap1 - Demonstrates flex-wrap.
+* flex-align0 - Starter code for demonstrating alignment
+* flex-align1 - Aligning flex items with `align-items` and `justift-content`
 * complex-flexbox - demonstrates a flexbox which is itself a flex item.

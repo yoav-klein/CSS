@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Flexbox 0 — starting code</title>
+    <title>Flexbox 1 — basic flexbox model chosen</title>
     <style>
       html {
         font-family: sans-serif;
@@ -31,9 +31,20 @@
         background: aqua;
       }
 
-      /* Add your flexbox CSS below here */
+    
+      section {
+        display: flex;
+      }
 
-     
+      /* we are adding this: */
+      article {
+        flex: 1 100px;
+      }
+
+      article:nth-of-type(3) {
+        flex: 2 200px;
+      }
+
 
       
     </style>
