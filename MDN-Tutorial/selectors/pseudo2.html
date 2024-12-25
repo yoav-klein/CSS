@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            width: 50%;
+        }
+        /* combine pseudo-class and pseudo-element */
+        article p:first-child::first-line {
+            font-weight: bold;
+        }
+        /* pseudo-element */
+        article ::first-line {
+            color: red;
+        }
+
+        a:hover {
+            font-weight: bold;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt eligendi blanditiis aspernatur, nisi doloremque alias ex dolorem similique at, nemo animi deleniti aliquid nesciunt, praesentium expedita adipisci illum rem numquam.</p>
+        <p>This is the second paragraph</p>
+        <p>and third</p>
+    </article>
+</body>
+</html>

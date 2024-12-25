@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p {
+            background-color: yellow;
+        }
+        div .foo {
+            background-color: aqua;
+        }
+        .box div {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <p>
+                <!-- doesn't matter how many levels between the p and the div -->
+                This is a paragraph inside a div
+            </p>
+        </ul>
+        <span>This is a span inside a div</span>
+        <br>
+        <span class="foo">and this is a span with the foo class</span>
+    </div>
+    <div class="box">
+        <div>
+            This is a div inside the box-class element
+        </div>
+    </div>
+</body>
+</html>

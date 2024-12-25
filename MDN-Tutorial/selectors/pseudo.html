@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* selects the first paragraph element in the article */
+        article p:first-child {
+            font-weight: bold;
+        }
+        /* selects any first element in the article */
+        article :first-child {
+            color: red;
+        }
+
+        a:hover {
+            font-weight: bold;
+            color: pink;
+        }
+    </style>
 </head>
 <body>
-    
+    <article>
+        <p>This is the first paragraph</p>
+        <p>This is the second</p>
+        <p>and third</p>
+
+        <a href="https://google.com">Google</a>
+    </article>
 </body>
 </html>
