@@ -28,8 +28,6 @@
 }
 
 input[type="checkbox"] {
-    /* Add if not using autoprefixer */
-    -webkit-appearance: none;
     appearance: none;
     /* For iOS < 15 to remove gradient background */
     background-color: #fff;
@@ -38,7 +36,8 @@ input[type="checkbox"] {
     width: 1.15em;
     height: 1.15em;
     border: 0.15em solid currentColor;
-    border-radius: 0.15em;
+    border-radius: 50%;
+    /* this moves the checkbox up a little bit*/
     transform: translateY(-0.075em);
 
     display: grid;
@@ -47,16 +46,16 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]::before {
-    content: "O";
+    content: '';
     width: 0.65em;
     height: 0.65em;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
     box-shadow: inset 1em 1em var(--form-control-color);
+    /* we can also use background-color here, but there's some good reason to use box-shadow */
 
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-    
 }
 
 input[type="checkbox"]:checked::before {
