@@ -1,0 +1,72 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --form-control-color: rebeccapurple;
+}
+
+.container {
+    width: 70%;
+    min-height: 70vh;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+.form-control {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+
+    /* grid for the gap, could also use flex */
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    font: inherit;
+    color: currentColor;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.1em;
+/* 
+    display: grid;
+    place-content: center; */
+    
+}
+
+input[type="checkbox"]::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '✓';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+    
+    transform: scale(1);
+}
+
+.form-control + .form-control {
+    margin-top: 1em;
+  }
