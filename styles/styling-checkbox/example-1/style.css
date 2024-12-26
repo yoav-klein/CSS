@@ -27,6 +27,7 @@
 .task {
     background: var(--task-background);
     border-radius: calc(var(--spacing) / 2);
+    /* applying display: flex on a <li> element overrides the display: list-item which creates the traditional bullet */
     display: flex;
     gap: var(--spacing);
     align-items: center;
@@ -42,7 +43,6 @@
 .task label {
     width: 100%;
     flex: 1;
-    /* applying display: flex on a <li> element overrides the display: list-item which creates the traditional bullet */
     display: flex;
     gap: var(--spacing);
     align-items: center;
