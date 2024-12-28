@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: aqua;
+}
+.outer {
+    background-color: rgb(15, 150, 44);
+    color: white;
+}
+.inner {
+    background-color: black;
+    color: white;
+    margin: 10px;
+}
+.inner_two {
+    background-color: rgb(116, 26, 96);
+    color: black;
+    margin: 10px;
+}
+.bottom_box {
+    background-color: chartreuse;
+}
