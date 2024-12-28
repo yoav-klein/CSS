@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+  .item {
+    background-color: blue;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-rows: masonry;
+  }
