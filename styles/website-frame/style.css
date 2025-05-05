@@ -39,24 +39,32 @@ header > img {
 }
 
 .menu-wrapper {
-    width: calc(var(--HEADER-HEIGHT) * 0.5);
-    height: calc(var(--HEADER-HEIGHT) * 0.5);
     position: absolute;
     right: 1em;
+    /* we want the height of the menu-wrapper to be half the height of the header */
+    /* the width is because we want it square */
+    width: calc(var(--HEADER-HEIGHT) * 0.5);
+    height: calc(var(--HEADER-HEIGHT) * 0.5);
 }
 
 .menu-wrapper input[type="image"] {
+    /* the image should take the whole area */
     max-width: 100%;
     height: auto;
 }
 
 .menu-content {
+    /* the menu content starts with display: none so that we toggle it in JS */
     display: none;
     min-width: 200px;
     background-color: #A8F1FF;
+    /* position: absolute is now relative to the containing menu-wrapper */
     position: absolute;
+    /* top: 100% because we want it just after the menu-wrapper */
     top: 100%;
+    /* we want the right border of the menu-content aligned with the right border of menu-wrapper i.e. the menu button */
     right: 0;
+    /* and some styling */
     list-style-type: none;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-bottom-left-radius: 10px;
