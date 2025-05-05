@@ -1,0 +1,82 @@
+
+/* || RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --HEADER-HEIGHT: 6rem;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFA8D;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4ED7F1;
+    height: var(--HEADER-HEIGHT);
+    box-shadow: 0 2px 3px black;
+    /* to center the h1 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative in order to be a positioning context */
+    position: relative;
+}
+
+/* the image and menu-wrapper are position: absolute in order for the h1 to be in the middle and not move */
+header > img {
+    position: absolute;
+    left: 1em;
+}
+
+.menu-wrapper {
+    width: calc(var(--HEADER-HEIGHT) * 0.5);
+    height: calc(var(--HEADER-HEIGHT) * 0.5);
+    position: absolute;
+    right: 1em;
+}
+
+.menu-wrapper input[type="image"] {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-content {
+    display: none;
+    min-width: 200px;
+    background-color: #A8F1FF;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    list-style-type: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.menu-content a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    background-color: #74e3fa;
+}
+
+.show {
+    display: block;
+}
+
+main {
+
+}

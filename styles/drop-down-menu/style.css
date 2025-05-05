@@ -1,0 +1,50 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header is flexbox to center the h1 */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    background-color: aqua;
+    position: relative;
+}
+
+/* menu-wrapper is position:absolute to put it in the side without 
+changing the h1 from being in the middle of the header */
+.menu-wrapper {
+    position: absolute;
+    background-color: blueviolet;
+    color: white;
+    right: 1em;
+    width: 100px;
+    height: 70px;
+}
+
+/* menu button takes the full area of the menu-wrapper */
+.menu-button {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* menu-content is position: absolute. This time it's relative to the .menu-wrapper */
+.menu-content {
+    display: none; /* initllay hide */
+    position: absolute;
+    top: 100%; /* make it start right after the button */
+    right: 0; /* align it with the right border of the button */
+    color: black;
+    list-style-type: none;
+    background-color: brown;
+    width: 150px;
+}
+
+.show {
+    display: block;
+}
