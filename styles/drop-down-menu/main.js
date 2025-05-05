@@ -4,11 +4,12 @@ toggle between hiding and showing the dropdown content */
 let menuButtonEl = document.querySelector(".menu-button");
 let menuContentEl = document.querySelector(".menu-content");
 
-console.log("START");
-
 menuButtonEl.addEventListener('click', () => {
-    console.log('click');
-    menuContentEl.classList.toggle("show");
+    if(menuContentEl.hasAttribute('hidden')) {
+        menuContentEl.removeAttribute('hidden')
+    } else {
+        menuContentEl.setAttribute('hidden', '')
+    }
 });
 
   
@@ -16,8 +17,8 @@ menuButtonEl.addEventListener('click', () => {
   window.onclick = function(event) {
 
     if (!event.target.matches('.menu-button')) {
-        if (menuContentEl.classList.contains('show')) {
-            menuContentEl.classList.remove('show');
+        if(!menuContentEl.hasAttribute('hidden')) {
+            menuContentEl.setAttribute('hidden', '')
         }
     }
 }

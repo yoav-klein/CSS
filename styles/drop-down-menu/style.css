@@ -35,7 +35,6 @@ changing the h1 from being in the middle of the header */
 
 /* menu-content is position: absolute. This time it's relative to the .menu-wrapper */
 .menu-content {
-    display: none; /* initllay hide */
     position: absolute;
     top: 100%; /* make it start right after the button */
     right: 0; /* align it with the right border of the button */
@@ -43,8 +42,4 @@ changing the h1 from being in the middle of the header */
     list-style-type: none;
     background-color: brown;
     width: 150px;
-}
-
-.show {
-    display: block;
 }
