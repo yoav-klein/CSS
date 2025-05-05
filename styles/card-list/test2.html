@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 0.5em;
+            border: 2px solid black;
+            width: 70%;
+            margin: auto;
+            height: 200px;
+        }
+        ul {
+            list-style: none;
+            border: 2px solid purple;
+            padding: 0.5em;
+        }
+        .tenant-item {
+            padding: 0.25em;
+            border: 1px solid red;
+            display: flex;
+            justify-content: space-between;
+            height: 4rem;
+            gap: 4px;
+        }
+        .tenant-item div {
+            border: 2px solid black;
+        }
+        .tenant-info {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tenant-actions {
+            padding: 0.1em;
+            height: 100%;
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .tenant-actions a {
+            height: 100%;
+            display: block;
+        }
+
+        .tenant-item img {
+            max-height: 100%;
+            width: auto;
+        }
+        
+        .tenant-info h3 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+  
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li class="tenant-item">
+                <div class="tenant-info">CyberArk</div>
+                <div class="tenant-actions">
+                    <a href="#"><img src="user-gear.svg" height="512" width="512" alt="manage"></a>
+                    <a href="#"><img src="house-leave.svg" height="150" width="150" alt="leave"></a>
+                </div>
+            </li>
+            <li class="tenant-item">
+                <div class="tenant-info">Microsoft</div>
+                <div class="tenant-actions">
+                    <a href="#"><img src="user-gear.svg" height="512" width="512" alt="manage"></a>
+                    <a href="#"><img src="house-leave.svg" height="150" width="150" alt="leave"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
