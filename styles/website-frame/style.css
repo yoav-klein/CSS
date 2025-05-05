@@ -54,8 +54,6 @@ header > img {
 }
 
 .menu-content {
-    /* the menu content starts with display: none so that we toggle it in JS */
-    display: none;
     min-width: 200px;
     background-color: #A8F1FF;
     /* position: absolute is now relative to the containing menu-wrapper */
@@ -67,8 +65,7 @@ header > img {
     /* and some styling */
     list-style-type: none;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
 }
 
 .menu-content a {
@@ -79,10 +76,6 @@ header > img {
 
 .menu-content a:hover {
     background-color: #74e3fa;
-}
-
-.show {
-    display: block;
 }
 
 main {

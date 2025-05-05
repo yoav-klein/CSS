@@ -1,22 +1,22 @@
 
 
-function toggleMenu() {
-    console.log("toggle menu");
-    let menuEl = document.querySelector(".menu-content");
-    console.log(menuEl.classList);
-    menuEl.classList.toggle("show");
-}
+let menuButtonEl = document.querySelector(".menu-button");
+let menuContentEl = document.querySelector(".menu-content");
 
-menuButtonEl = document.querySelector('.menu-wrapper input[type="image"]');
 menuButtonEl.addEventListener('click', () => {
-    toggleMenu();
+    if(menuContentEl.hasAttribute('hidden')) {
+        menuContentEl.removeAttribute('hidden')
+    } else {
+        menuContentEl.setAttribute('hidden', '')
+    }
 });
 
+  
+  // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-    if (!event.target.matches('.menu-wrapper input[type="image"]')) {
-        let menuEl = document.querySelector(".menu-content");
-        if(menuEl.classList.contains('show')) {
-            menuEl.classList.remove('show');
+    if (!event.target.matches('.menu-button')) {
+        if(!menuContentEl.hasAttribute('hidden')) {
+            menuContentEl.setAttribute('hidden', '')
         }
     }
-  }
+}
