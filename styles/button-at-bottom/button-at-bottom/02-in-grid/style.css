@@ -5,32 +5,27 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     background-color: white;
     height: 100%;
-
-    display: flex;
-    justify-content: safe center;
-    align-items: center;
-    flex-direction: column;
 }
 
 body {
-    height: 95%;
-    width: 95%;
-    background-color: beige;
-    
-    display: flex;
-    justify-content: safe center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
-.contents {
+header {
+    height: 100px;
+    border-bottom: 1px solid black;
+}
+
+.content {
     height: 100%;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-auto-rows: 100%;
+    overflow: auto;
 }
 
 aside {
@@ -44,14 +39,14 @@ main {
     position: relative;
 }
 
-.sections {
-    margin: auto;
-    width: 95%;
+.category-grid {
     height: 100%;
     
     background-color: rgb(25, 179, 76);
 
     overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 section {
