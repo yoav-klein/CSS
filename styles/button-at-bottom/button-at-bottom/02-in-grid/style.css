@@ -26,10 +26,20 @@ body {
     flex-direction: column;
 }
 
+.contents {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: 100%;
+}
+
+aside {
+    width: 200px;
+    border-right: 1px solid black;
+}
+
 main {
     background-color:aqua;
-    width: 95%;
-    height: 95%;
 
     position: relative;
 }
