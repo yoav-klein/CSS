@@ -23,7 +23,9 @@ header {
 .content {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-auto-rows: 100%;
+
+    /* this must be set so that  the height of .content will be body - header, and not the height of the content. 
+    See  heights-and-overflows/05-grid/03-grid-in-grid  */
     overflow: auto;
 }
 
@@ -36,15 +38,19 @@ main {
     background-color:aqua;
 
     position: relative;
+
+    /* this must be set so that only the main will be scrolled, and not the whole .content */
+    overflow: auto;
 }
 
 .category-grid {
+    /* these must be set so that the scroll container is the .category-grid, and not the main */
     height: 100%;
-    align-items: start;
+    overflow: auto;
     
+    align-items: start;
     background-color: rgb(25, 179, 76);
 
-    overflow: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
