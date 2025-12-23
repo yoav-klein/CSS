@@ -3,7 +3,7 @@
 
 Now chech this shit out: 
 1. we set the `main` to be a fixed height - without it, it will stretch to the height of the content
-2. we set the `main` to be a flexbox, centering all its content with `justify-content: center`
+2. we set the `main` to be a flexbox (column), centering all its content with `justify-content: center`
 
 What happens? some of the flex items are above the `main` container. why??
 The way to understand it is as such:
