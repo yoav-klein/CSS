@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 500px;
+            height: 200px;
+            margin: auto;
+            background-color: aqua;
+
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .item {
+            border: 2px dashed red;
+            width: 200px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">This is a long and boring paragraph</div>
+        <div class="item">Oh and here's another one, very long, boring</div>
+        <div class="item">Dude I almost put lorem ipsum shit there watch out</div>
+    </div>
+</body>
+</html>
