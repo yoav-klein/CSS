@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrapper {
+        height: 600px;
+        width: 50%;
+        margin: 0 auto;
+        background-color: aqua;
+        
+        display: grid;
+
+        /* the grid-template-column can take any length unit */
+
+        /* grid-template-columns: 200px 200px 200px; */
+        /* grid-template-columns: 20rem 20rem 40rem; */
+        /* grid-template-columns: 20% 20% 20%; */
+        
+        /* it can also take the fr unit, which stands for fractions */
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    .box {
+        border: 1px dashed red;
+        border-radius: 5px;
+    } 
+</style>
+<body>
+    <div class="wrapper">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three</div>
+        <div class="box">Four</div>
+        <div class="box">Five</div>
+    </div>
+</body>
+</html>

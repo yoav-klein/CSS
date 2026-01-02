@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrapper {
+        height: 600px;
+        width: 50%;
+        margin: 0 auto;
+        background-color: aqua;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .box {
+        border: 1px dashed red;
+        border-radius: 5px;
+    } 
+</style>
+<body>
+    <div class="wrapper">
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, nulla quaerat, illum ex nam sapiente inventore molestiae dignissimos officia distinctio non expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus libero hic neque atque possimus unde. Provident porro impedit repudiandae accusamus eveniet vitae voluptatem deserunt? Nam ad facilis earum suscipit? Lorem, ipsum dolor sit amet consectetur adipis, maiores omnis a fugit voluptatem nesci</div>
+        <div class="box">BOX</div>
+    </div>
+</body>
+</html>
