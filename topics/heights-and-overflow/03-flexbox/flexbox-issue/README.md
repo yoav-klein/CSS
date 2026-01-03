@@ -1,7 +1,7 @@
 # Heights and overflows - flexbox
 ---
 
-Now chech this shit out: 
+Now check this shit out: 
 1. we set the `main` to be a fixed height - without it, it will stretch to the height of the content
 2. we set the `main` to be a flexbox (column), centering all its content with `justify-content: center`
 
