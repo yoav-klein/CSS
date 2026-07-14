@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 600px;
+    border: 1px solid black;
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    
+    
+    width: 460px;
+    grid-template-columns: 2fr minmax(200px, 1fr) 50px;
+    justify-content: start;
+    
+}
+
+.item {
+    border: 1px dashed red;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">A</div>
+        <div class="item">But let's add some content</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 650px;
+            height: 500px;
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: fit-content(84px) 1fr 1fr;
+            grid-auto-rows: minmax(50px, auto);
+            
+            
+        }
+
+        .item {
+            border: 1px dashed red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">Lorem ipsum sapiente tempoilique! Veritatis, nostrum!</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+        <div class="item">A</div>
+    </div>
+</body>
+</html>
